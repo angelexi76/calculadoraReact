@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/App.css';
+import Botones from './components/Botones';
+import CampoDatos from './components/CampoDatos';
+import IconsPanel from './components/IconsPanel';
+import PanelError from './components/PanelError';
+import PanelHistorial from './components/PanelHistorial';
+import Resultado from './components/Resultado';
+import Theme from './components/Theme';
+import CalculatorContainer from './containers/CalculatorContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <CalculatorContainer>
+         
+          <CampoDatos />
+
+          <Resultado />
+
+          <IconsPanel />
+
+          <PanelHistorial />
+
+          <Botones />
+
+          <PanelError />
+        
+                    
+       </CalculatorContainer>
+
+       <Theme />
+     </>
   );
 }
 
